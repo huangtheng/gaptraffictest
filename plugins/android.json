@@ -1,0 +1,73 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "com.jjdltc.cordova.plugin.zip": {
+            "PACKAGE_NAME": "eu.vietplus.fahrschul"
+        },
+        "cordova-plugin-admobpro": {
+            "PACKAGE_NAME": "eu.vietplus.fahrschul"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "eu.vietplus.fahrschul"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "eu.vietplus.fahrschul"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "eu.vietplus.fahrschul"
+        },
+        "cordova-plugin-extension": {
+            "PACKAGE_NAME": "eu.vietplus.fahrschul"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "eu.vietplus.fahrschul"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "eu.vietplus.fahrschul"
+        },
+        "cordova-plugin-nativeaudio": {
+            "PACKAGE_NAME": "eu.vietplus.fahrschul"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "eu.vietplus.fahrschul"
+        },
+        "cordova-plugin-pdialog": {
+            "PACKAGE_NAME": "eu.vietplus.fahrschul"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "eu.vietplus.fahrschul"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "eu.vietplus.fahrschul"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "eu.vietplus.fahrschul"
+        },
+        "cordova-plugin-zip": {
+            "PACKAGE_NAME": "eu.vietplus.fahrschul"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "eu.vietplus.fahrschul"
+        },
+        "cordova-sqlite-ext": {
+            "PACKAGE_NAME": "eu.vietplus.fahrschul"
+        },
+        "com.hutchind.cordova.plugins.streamingmedia": {
+            "PACKAGE_NAME": "eu.vietplus.fahrschul"
+        },
+        "com.xmartlabs.cordova.market": {
+            "PACKAGE_NAME": "eu.vietplus.fahrschul"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "eu.vietplus.fahrschul"
+        }
+    }
+}

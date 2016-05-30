@@ -1,0 +1,1088 @@
+::-webkit-scrollbar {
+    width: 0;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+
+/*main*/
+.contentBody{
+    min-height: calc(100% - 50px);
+    min-height: -webkit-calc(100% - 50px);
+    min-height: -moz-calc(100% - 50px);
+}
+
+.question-section {
+    padding: 0 10px;
+}
+
+
+#toolbar2 {
+    width: 100% !important;
+    position: fixed;
+    overflow: hidden;
+    z-index: 9999;
+    min-height: 44px;
+}
+
+#toolbar2 div {
+    line-height: 44px;
+    vertical-align: middle;
+}
+
+#toolbar2 p {
+    display: inline-block;
+}
+
+.dvHeader1_1 {
+    width: 25% !important;
+    float: left;
+    display: inline-block;
+}
+
+.dvHeader1_2 {
+    width: 25% !important;
+    float: left;
+    display: inline-block;
+}
+
+.dvHeader1_3 {
+    width: 25% !important;
+    float: left;
+    display: inline-block;
+}
+
+.dvHeader1_5 {
+    width: 25% !important;
+    float: left;
+    display: inline-block;
+}
+
+.dvHeader1_6 {
+    width: 25% !important;
+    float: left;
+    display: inline-block;
+}
+
+.toolbarTest{
+    height:40px;
+}
+
+.stQuestionContent{
+    padding: 5px 0;
+}
+
+.dvVideoL{
+    padding: 10px 0;
+    height: 200px !important;
+    text-align: center;
+}
+
+.imgBig{
+    width: auto;
+    height : auto;
+    max-width:100%;
+    max-height: 100%;
+    margin:auto;
+    border-width:0;
+}
+
+.imgBig_variant{
+    width: 100%;
+    height : 100%;
+    max-height: 100%;
+    max-width: 100%;
+    margin-left:10px;
+    border-radius:12px;
+    border-width:2px;
+    border-style:solid;
+    border-color:#00827a;
+}
+
+.imgBig1 {
+    width: auto;
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.imgBig_variant1{
+    width: 100%;
+    height : 100%;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+#dialog{
+    position:absolute;
+    min-height: 100%;
+    min-width: 100%;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    display:none;
+    z-index: 99999;
+}
+
+#dialogVideo{
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    /*visibility:hidden;*/
+    display: none;
+    z-index: 9999999;
+}
+
+
+#contentImgBig{
+    display: none;
+}
+
+.dvContentR1_1{
+    padding-left:0;
+}
+
+.dvContentR2_1{
+    padding-left:0;
+}
+
+.pretext{
+    font-size: 13px;
+    margin-left:10px;
+    padding-top:0;
+    padding-bottom:0;
+    margin-bottom:0;
+    margin-top:0;
+}
+
+#ipFilm{
+    height:2.7em;
+    width: 13em;
+    background-color:blue;
+    color:white;
+    border-width: 0;
+}
+
+#ipZur{
+    height:2.7em;
+    width: 13em;
+    background-color:blue;
+    color:white;
+    margin-top: 1em;
+    border-width: 0;
+}
+
+.btHard{
+    height: 45px;
+    width: 45px;
+    max-width: 100px;
+    background-color: transparent;
+    border-width:0;
+    padding: 0;
+}
+
+.imgHard{
+    height: 40px;
+    width: 40px;
+}
+
+#ipNext{
+    height: 40px;
+    width: 80%;
+    max-width: 130px;
+    border-width:0;
+    border-radius:10px;
+    background-color: #71bf38;
+    color: white;
+}
+
+#ipNext:active{
+     background-color: #c7f2a7;
+}
+
+#ipValid{
+    height: 40px;
+    width: 80%;
+    max-width: 130px;
+    border-width:0;
+    border-radius:10px;
+    background-color: #ffbf15;
+    color: white;   
+}
+
+#ipValid:active{
+    background-color: #ffde87;
+}
+
+#ipBack{
+    height: 40px;
+    width: 90%;
+    max-width: 200px;
+    border-width:0;
+    border-radius:10px;
+    background-color: #153ea8;
+    color: white; 
+}
+
+#ipBack:active{
+    background-color: #a7b8e4;
+}
+
+#ipReturn{
+    height: 40px;
+    width: 80%;
+    max-width: 130px;
+    border-width:0;
+    border-radius:10px;
+    background-color: #cd2630;
+    color: white;
+}
+
+#ipReturn:active{
+    background-color: #eaaaae;
+}
+
+#pSie{
+    height:2.7em;
+    color:black;
+    margin-top: 1em;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+#pSie1{
+    height:2.7em;
+    color:black;
+    margin-top: 1em;
+    margin-bottom: 0;
+    text-align: left;
+    font-size:12px;
+}
+
+.countVideo{
+    color:#ff3700;
+}
+
+.ipAnswer{
+    height:2.7em;
+    width: 5em;
+    border-width:0;
+    border-radius: 10px;
+    background-color:#bdbdbd;
+    color:black;
+    text-align:center;
+}
+
+.ipValid{
+    height:2.7em;
+    width: 5em;
+    border-width:0;
+    border-radius: 10px;
+    background-color:#71bf38;
+    color:white;
+    text-align:center;
+}
+
+.ipAnswer1{
+    height:2.7em;
+    width: 5em;
+    border-width:0;
+    border-radius: 10px;
+    background-color:#bdbdbd;
+    color:black;
+    text-align:center;
+}
+
+.ipValid1{
+    height:2.7em;
+    width: 5em;
+    border-width:0;
+    border-radius: 10px;
+    background-color:#71bf38;
+    color:white;
+    text-align:center;
+}
+
+.ipAnswer2{
+    height:2.7em;
+    width: 5em;
+    border-width:0;
+    border-radius: 10px;
+    background-color:#bdbdbd;
+    color:black;
+    text-align:center;
+}
+
+.ipValid2{
+    height:2.7em;
+    width: 5em;
+    border-width:0;
+    border-radius: 10px;
+    background-color:#71bf38;
+    color:white;
+    text-align:center;
+}
+/*footer*/
+.footer{
+    height: 44px !important;
+    line-height: 44px !important;
+    vertical-align: middle;
+    background-color: #181B3D !important;
+    overflow-x: hidden;    
+    width:100%;
+    z-index: 99999;
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.dvFooter2_1{    
+    width: 15%;
+}
+
+.dvFooter2_2{    
+    width: 35%;
+}
+
+.dvFooter2_3{    
+    width: 20%;
+}
+
+.dvFooter2_4{
+    width: 20%;
+}
+
+.dvFooter2_5{    
+    width: 10%;
+}
+
+.dv-count-ticked{
+    position:absolute;
+    bottom: 50px;
+    left:0;
+    width: 60%;
+    height:30px;
+}
+
+.pnoch{
+    padding-left:10px;
+}
+
+.dv-count-ticked p{    
+    font-size: 12px;
+}
+
+/*menu choose question*/
+#menu_question{
+    position:absolute;
+    bottom: 44px;
+    left:0;
+    width: 100%;
+    height:100px;    
+    z-index:999;
+    display:none;
+}
+
+.dv_menu_tap{
+    height:50px;
+    width: 100%;
+}
+
+#ip_grun{
+    height:50px;
+    width:120px;
+    background-color:#00827a;
+    margin-left: 40px;
+    color: white;
+    border-bottom: 0;
+    border-width: 1px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+#ip_type_b{
+    height:50px;
+    width:50px;
+    background-color:#636363;
+    border-width: 1px;
+    color: white;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.dv_menu{
+    height:50px;
+    width:100%;
+    background-color: #00827a;
+}
+
+.dv_menu_close{
+    height:50px;
+    width:80px;    
+}
+
+#dv_menu_q1{
+    height:50px;
+    padding-left:4px;
+    white-space: nowrap;
+    overflow-x:scroll;
+    overflow-y:hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+#dv_menu_q1 input{
+    display:inline-block;
+}
+
+#dv_menu_q2{
+    height:50px;
+    display:none;
+    white-space: nowrap;
+     padding-left:4px;
+    overflow-x:scroll;
+    overflow-y:hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+#dv_menu_q2 input{
+    display:inline-block;
+}
+
+.bt_question_number{
+    height:38px;
+    width:38px;
+    background-color:white;
+    color:#038f86;
+    border:0;
+    margin-left:4px; 
+    margin-top:5px; 
+}
+
+.bt_question_number_check{
+    height:38px;
+    width:38px;
+    background-color:#71bf38;
+    color:white;
+    border:0;
+    margin-left:4px; 
+    margin-top:5px; 
+}
+
+.bt_question_number_vd{
+    height:38px;
+    width:38px;
+    background-color:white;
+    color:#038f86;
+    border:0;
+    margin-left:4px;
+    margin-top:5px; 
+    background-image: url(../img/qvideo.png);
+    background-size:contain;
+    background-repeat:no-repeat;
+}
+
+.bt_question_number_hard{
+    height:38px;
+    width:38px;
+    border:1px;
+    border-style:solid;
+    border-color: #ffbf15;
+    margin-left:4px;  
+}
+
+.choosed{
+    color: red;
+}
+
+/*test result*/
+#contentResult {
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    -moz-transition: all 0.5s ease-out 0;
+    -o-transition: all 0.5s ease-out 0;
+    -webkit-transition: all 0.5s ease-out 0;
+    transition: all 0.5s ease-out 0;
+}
+
+.ip_status_right{
+    width: 130px;
+    height:35px;
+    background-color: #3db707;
+}
+
+.ip_status_wrong{
+    width: 130px;
+    height:35px;
+    background-color: #cd2630;
+}
+
+.toolbarHard{
+    background-color:#ffbf15 !important;
+}
+
+.toolbarHard1{
+    background-color:#ffbf15 !important;
+    top:0!important;
+}
+
+.pQuestion{
+    padding-left:10px;
+    font-size:14px;
+    color:#00827a;
+    margin: 0 0 5px 0;
+    font-weight: bold;
+}
+
+#video{
+    object-fit: initial;
+    min-height: 100% !important;
+    min-width: 100% !important;
+    height: 100% !important;
+    width: 100% !important;
+    z-index: 999999;
+}
+
+.pAnswer{
+    font-size: 14px;
+    line-height:110%;
+}
+
+.item_flip{
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;    
+    right:0;
+    bottom:0;
+    background-color:transparent;
+    transition: -webkit-transform 0.3s cubic-bezier(0.35, 0, 0.25, 1);
+    transition: transform 0.3s cubic-bezier(0.35, 0, 0.25, 1);
+    overflow: auto;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    padding-top: 40px;
+}
+
+.ng-isolate-scope{
+    height:100%;
+}
+
+.flip-container {
+    -moz-perspective: 1000;
+    -ms-perspective: 1000;
+    -webkit-perspective: 1000;
+    perspective: 1000;    
+}
+
+md-tabs md-tabs-wrapper{
+    display:none;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes myAnim {
+    0%   {opacity: 0}
+    25%  {opacity: 0.25}
+    50%  {opacity: 0.5}
+    75%  {opacity: 0.75}
+    100% {opacity: 1}
+}
+
+@-moz-keyframes myAnim {
+    0%   {opacity: 0}
+    25%  {opacity: 0.25}
+    50%  {opacity: 0.5}
+    75%  {opacity: 0.75}
+    100% {opacity: 1}
+}
+
+@keyframes myAnim {
+    0%   {opacity: 0}
+    25%  {opacity: 0.25}
+    50%  {opacity: 0.5}
+    75%  {opacity: 0.75}
+    100% {opacity: 1}
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes myAnim_out {
+    0%   {opacity: 1}
+    25%  {opacity: 0.75}
+    50%  {opacity: 0.5}
+    75%  {opacity: 0.25}
+    100% {opacity: 0}
+}
+
+@-moz-keyframes myAnim_out {
+    0%   {opacity: 1}
+    25%  {opacity: 0.75}
+    50%  {opacity: 0.5}
+    75%  {opacity: 0.25}
+    100% {opacity: 0}
+}
+
+@keyframes myAnim_out {
+    0%   {opacity: 1}
+    25%  {opacity: 0.75}
+    50%  {opacity: 0.5}
+    75%  {opacity: 0.25}
+    100% {opacity: 0}
+}
+
+.item_flip.flipRight{
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    -webkit-animation: 0.3s md-tab-content-hide;
+    animation: 0.3s md-tab-content-hide;
+    opacity: 0;
+}
+
+.item_flip.flipLeft{    
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    -webkit-animation: 0.3s md-tab-content-hide;
+    animation: 0.3s md-tab-content-hide;
+    opacity: 0;
+}
+
+
+@media (min-width:320px) { 
+     #ipNext{
+         font-size:13px;
+         height: 31px;
+     }
+
+     #ipValid{
+         font-size:13px;
+         height: 31px;
+     }
+
+     #ipBack{
+         font-size:13px;
+         height: 31px;
+     }
+
+     #ipReturn{
+         font-size: 13px;
+         height: 31px;
+     }
+
+    .btHard{
+      height: 31px;
+    }
+
+     .imgHard{
+       height: 31px;
+       width: 31px;
+     }
+
+     .dv-count-ticked{
+         bottom: 45px;
+     }
+
+     .pQuestion{
+         font-size:14px;
+     }
+
+     .pAnswer{
+        font-size: 13px;
+    }
+     
+     .dvContentR2{
+         padding-left: 0.5em;
+     }
+     
+     #pSie{
+         font-size: 11px;
+     }
+     
+     .countVideo{
+         margin-bottom:5px;
+         margin-top: 0;
+     }
+     
+     #pSie1{
+         font-size:11px;
+     }
+
+    .pretext {
+        font-size: 14px;
+    }
+
+    .ip_status_right{
+        width:110px;
+        font-size:12px;
+    }
+
+    .ip_status_wrong {
+        width:110px;
+        font-size:12px;
+    }
+}
+@media (min-width:481px) {
+    #ipNext{
+        font-size:13px;
+        height: 35px;
+    }
+    
+    #ipValid{
+        font-size:13px;
+        height: 35px;
+    }
+    
+    #ipBack{
+        font-size:13px;
+        height: 35px;
+    }
+    
+    #ipReturn{
+        font-size: 13px;
+        height: 35px;
+    }
+    
+      .dv-count-ticked{
+         bottom: 45px;
+     }
+
+      .pretext {
+        font-size: 15px;
+    }
+
+    .pAnswer{
+        font-size: 14px;
+    }
+    
+    #check{
+        width: 4.3em;
+        height: 4.3em;
+    }
+    
+    #pSie{
+        font-size: 11px;
+    }
+    
+    .countVideo{
+        margin-bottom:5px;
+        margin-top: 0;
+    }
+    
+    #pSie1{
+        font-size:11px;
+    }
+    
+    .btHard{
+        height: 35px;
+    }
+    
+    .imgHard{
+        height: 34px;
+        width: 34px;
+    } 
+}
+@media (min-width:641px) { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
+@media (min-width:961px) { 
+     .dv-count-ticked{
+         bottom: 55px;
+     }
+
+     .dv_menu_tap{
+         height:55px;
+     }
+
+     .bt_question_number{            
+        margin-top:10px; 
+    }
+
+    .bt_question_number_vd {
+        margin-top:10px; 
+    }
+
+    .dv_menu_close{
+       height:55px;       
+    }
+
+    #dv_menu_q1 {
+        height:55px;
+    }
+
+     #dv_menu_q2 {
+        height:55px;
+    }
+
+     #ip_grun{
+        height:55px;   
+    }
+
+    #ip_type_b {
+        height:55px;   
+        width:55px;
+    }
+
+    .dv_menu {
+        height: 55px;
+    }
+
+    #check{
+        height:7em;
+        width:7em;
+    }
+
+    .pQuestion{
+         font-size:20px;
+     }
+    
+}
+@media (min-width:1025px) { 
+    .dvContentR1{
+        padding-left:3em;
+    }
+
+    .dvContentR2{
+        padding-left:1em;
+    }
+
+    .dv-count-ticked{
+        left: 10px;
+        bottom: 65px;
+    }
+
+    #ipNext{
+         font-size:14px;
+         height: 50px;
+     }
+
+     #ipValid{
+         font-size:14px;
+         height: 50px;
+     }
+
+     #ipBack{
+         font-size:14px;
+         height: 50px;
+     }
+
+     #ipReturn{
+        font-size:14px;
+         height: 50px;
+     }
+
+     .dv_menu_tap{
+         height:55px;
+     }
+
+    .bt_question_number{            
+        margin-top:10px; 
+    }
+
+    .bt_question_number_vd {
+        margin-top:10px; 
+    }
+
+    .dv_menu_close{
+       height:55px;       
+    }
+
+    #dv_menu_q1 {
+        height:55px;
+    }
+
+    #dv_menu_q2 {
+        height:55px;
+    }
+
+    #menu_question{
+        height: 110px;
+    }
+
+    #ip_grun{
+        height:55px;   
+    }
+
+    #ip_type_b {
+        height:55px;   
+        width:55px;
+    }
+
+    .dv_menu {
+        height: 55px;
+    }
+
+    #check{
+       height:6em;
+       width:6em;
+    }
+
+    .pAnswer{
+        font-size: 17px;
+    }
+ 
+    .btHard{
+        height: 50px;
+        width: 50px;        
+    }
+
+    .imgHard{
+        height: 45px;
+        width: 45px;
+    }
+
+    #pSie{
+       font-size:18px;
+    }
+
+    #pSie1{
+        font-size:18px;
+    }
+
+    .countVideo {
+        font-size:18px;
+    }
+    .toolbarTest{
+        height:50px;
+    }
+
+    .pQuestion{
+         font-size:20px;
+     }
+
+    .pretext {
+        font-size: 20px;
+    }
+
+    .ip_status_right{
+        width:130px;
+        font-size:15px;
+    }
+
+    .ip_status_wrong {
+        width:130px;
+        font-size:15px;
+    }
+}
+@media (min-width:1281px) { 
+    .dvContentR1{
+        padding-left:3em;
+    }
+
+    .dvContentR2{
+        padding-left:3em;
+    }
+
+    .dv-count-ticked{
+        left: 10px;
+        bottom: 65px;
+    }
+
+    #ipNext{
+         font-size:14px;
+         height: 50px;
+     }
+
+     #ipValid{
+         font-size:14px;
+         height: 50px;
+     }
+
+     #ipBack{
+         font-size:14px;
+         height: 50px;
+     }
+
+     #ipReturn{
+        font-size:14px;
+         height: 50px;
+     }
+
+     .dv_menu_tap{
+         height:55px;
+     }
+
+     .bt_question_number{            
+        margin-top:10px; 
+    }
+
+    .bt_question_number_vd {
+        margin-top:10px; 
+    }
+
+    .dv_menu_close{
+       height:55px;       
+    }
+
+    #dv_menu_q1 {
+        height:55px;
+    }
+
+     #dv_menu_q2 {
+        height:55px;
+    }
+
+     #menu_question{
+        height: 110px;
+    }
+
+     #ip_grun{
+        height:55px;   
+    }
+
+    #ip_type_b {
+        height:55px;   
+        width:55px;
+    }
+
+    .dv_menu {
+        height: 55px;
+    }
+
+    #check{
+       height:6em;
+       width:6em;
+    }
+
+    .pAnswer{
+        font-size: 17px;
+    }
+
+    .btHard{
+        height: 50px;
+        width: 50px;        
+    }
+
+    .imgHard{
+        height: 45px;
+        width: 45px;
+    }
+
+    #pSie{
+       font-size:18px;
+    }
+
+    #pSie1{
+        font-size:18px;
+    }
+
+    .countVideo {
+        font-size:18px;
+    }
+
+    .pretext {
+        font-size: 20px;
+    }
+
+    .pretext {
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,21 @@
+﻿
+<link rel="stylesheet" href="css/question.css" />
+<md-content>
+    <md-list flex>
+        <md-subheader class="md-no-sticky" style="text-align:center">{{divider1}}</md-subheader>
+        <md-divider inset></md-divider>
+        <md-list-item ng-repeat="item in menuQuestion" ng-click="open(item.event)">
+            <img src="img/catalogs/catalogIcon1_1.png" class="imgIconLeft">
+            <div class="dvItemRight" layout="column" layout-fill>
+                <section layout="vertical" layout-sm="horizontal" layout-align="center center">
+                    <p class="pItemAll">{{ item.name}}{{item.number != "" ? ' (' + item.number + ')' : ' (0)'}}</p>
+                    <div layout-fill flex>
+                        <md-progress-linear md-mode="determinate" value="{{item.percent}}"></md-progress-linear>                           
+                    </div>                            
+                    <p class="pItemPercent">{{item.percent + '%'}}</p>
+                </section>                        
+                <md-divider inset class="divderRight"></md-divider>                        
+            </div>                    
+        </md-list-item>
+    </md-list>    
+</md-content>

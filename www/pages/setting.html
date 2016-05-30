@@ -1,0 +1,16 @@
+﻿<link href="css/setting.css" type="text/css" rel="stylesheet" />
+<div class="list">
+<!--     <div class="item item-divider">{{divider1}}</div>
+    <a class="item item-icon-right" ng-repeat="item in menuQuestion.setting_start" ng-click="chooseStart(item.event)">
+        {{item.name}}
+        <i ng-if="item.choosed" class="fa fa-check" aria-hidden="true"></i>
+    </a> -->
+    <div class="item item-divider">{{divider4}}</div>
+    <div class="item">
+        {{question_time}}
+    </div>
+    <div class="item item-divider">{{divider2}}</div>
+    <ion-toggle ng-model="isQuestionRandom" ng-change="settingQuestion()" toggle-class="toggle-dark">{{questionRandom}}</ion-toggle>
+    <ion-toggle ng-model="isAnswerRandom" ng-change="settingAnswer()" toggle-class="toggle-dark">{{answerRandom}}</ion-toggle>
+    <ion-toggle ng-model="isAudio" ng-change="settingAudio()" toggle-class="toggle-dark">{{audio}}</ion-toggle>
+</div>

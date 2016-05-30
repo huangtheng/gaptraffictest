@@ -1,0 +1,64 @@
+﻿
+#wrapStatistic{
+    background-color:#c0c0c0;
+    position: relative;
+    overflow-x: hidden;
+}
+
+#statisticAnswer {
+    width: 100%;
+    max-height: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: white;
+    position:absolute;
+}
+
+
+#wrapContent{
+    width: 98%;
+    height:98%;
+    max-height: 98%;
+    left:1%;
+    top:1%;
+    border-radius: 20px;
+    background-color: white;
+    position:absolute;
+}
+
+.flipRight{
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    -webkit-animation: 0.3s md-tab-content-hide;
+    animation: 0.3s md-tab-content-hide;
+    opacity: 0;
+}
+
+.flipLeft{    
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    -webkit-animation: 0.3s md-tab-content-hide;
+    animation: 0.3s md-tab-content-hide;
+    opacity: 0;
+}
+
+
+.imgIconLeft{
+    height: 2.5em;
+    width: 2.5em;
+}
+
+@media (min-width:1025px) {
+     .imgIconLeft{
+        height: 3.5em;
+        width: 3.5em;
+    }
+}
+
+@media (min-width:1281px) {
+     .imgIconLeft{
+        height: 3.5em;
+        width: 3.5em;
+    }
+}

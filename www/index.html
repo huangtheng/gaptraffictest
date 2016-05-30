@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="TrafficLaws">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>eFahrschule</title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/master.css">    
+    <!-- <link href="css/animations.css" type="text/css" rel="stylesheet"> -->
+    <!-- <link href="css/angular-chart.min.css" type="text/css" rel="stylesheet"> -->
+    <!-- <link href="css/touchscroll.css" type="text/css" rel="stylesheet"> -->
+    <link href="css/font-awesome.css" type="text/css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" >  
+
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="cordova.js"></script>
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="lib/angular-animate/angular-animate.min.js"></script>
+    <script src="lib/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="lib/angular-touch/angular-touch.min.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <ion-view ng-controller="MasterCtrl">
+        <div class="bar bar-header bar-dark">
+            <div class="buttons">
+                <a class="button button-clear" ng-if="isBack" ng-click="setting($event);$event.stopPropagation();">
+                    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                </a>
+            </div>
+            <h1 class="title">{{titleAll.length &gt; 0 ? titleAll : &quot;eFahrschule&quot;}}</h1>
+            <div class="buttons">
+                <a class="button button-clear" ng-if="!searchDisabled" ng-show="!isSearch" ng-click="openSearch();$event.stopPropagation();">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </a>
+                <a class="button button-clear" ng-click="changeLanguage()">
+                    <i class="fa fa-language" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+        <ion-content class="scroll-content ionic-scroll overflow-scroll has-header" id="wrapAll" ui-view="">
+        </ion-content>
+    </ion-view>
+</body>
+</html>
+

@@ -1,0 +1,176 @@
+
+.dvItemRight{
+    width: 100%;
+    height: 100%;
+}
+
+.divderRight{
+    left:auto;
+}
+
+.imgIconLeft{
+    height: 2.5em;
+    width: 2.5em;
+}
+
+.list{
+   padding: 0;
+}
+
+.pItemAll{
+    min-width:40%;
+    padding-left:5%;
+}
+
+.pItemPercent{
+    min-width: 12%;
+    text-align: right;
+}
+
+.progress{
+    margin-top:4%;
+}
+
+md-progress-linear .md-bar {
+    background-color: #38bbb3;
+}
+
+#listQuestion{
+    width: 100%;
+    height: 100%;
+}
+
+#questionByTheme {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    display: none;
+    z-index:2;
+    background-color: white;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.item_home{
+    background-color:white;
+    padding: 0 16px;
+}
+
+.item_home:active{
+    background-color: rgba(136, 139, 144, 0.19);
+}
+
+.hideThem{
+    color: #c6c6c6;
+}
+
+.md-no-sticky{
+        font-size:15px !important;
+    }
+
+.listdemoListControls {
+  /* Add some right padding so that the text doesn't overlap the buttons */ }
+  .listdemoListControls md-divider {
+    margin-top: 10px;
+    margin-bottom: 10px; }
+  .listdemoListControls md-list-item > p,
+  .listdemoListControls md-list-item > .md-list-item-inner > p,
+  .listdemoListControls md-list-item .md-list-item-inner > p,
+  .listdemoListControls md-list-item .md-list-item-inner > .md-list-item-inner > p {
+    -webkit-user-select: none;
+    /* Chrome all / Safari all */
+    -moz-user-select: none;
+    /* Firefox all */
+    -ms-user-select: none;
+    /* IE 10+ */
+    user-select: none;
+    /* Likely future */ }
+  .listdemoListControls .secondary-button-padding p {
+    padding-right: 100px; }
+
+
+@media (min-width:320px) { 
+     .md-no-sticky{
+        font-size:12px !important;
+    }
+
+      .item_home {
+        height:45px;
+    }
+}
+@media (min-width:481px) {
+    .md-no-sticky{
+        font-size:16px !important;
+    }
+
+    .item_home {
+        height:50px;
+    }
+}
+@media (min-width:641px) { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
+@media (min-width:961px) { 
+    md-list .md-subheader {
+        line-height: 2em;
+    }
+
+    .md-button {
+        line-height:44px;
+    }
+
+    .imgIconLeft{
+        height: 3.5em;
+        width: 3.5em;
+    }
+
+    .md-no-sticky{
+        font-size:18px !important;
+    }
+}
+@media (min-width:1025px) { 
+
+    md-list .md-subheader {
+        line-height: 2em;
+    }
+
+    .md-button {
+        line-height:48px;
+    }
+    .imgIconLeft{
+        height: 3.5em;
+        width: 3.5em;
+    }
+    .md-no-sticky{
+        font-size:18px !important;
+    }
+
+     .item_home {
+        height:80px;
+    }
+}
+@media (min-width:1281px) { 
+
+    md-list .md-subheader {
+        line-height: 2em;
+    }
+
+    .md-button {
+        line-height:48px;
+    }
+
+    .imgIconLeft{
+        height: 3.5em;
+        width: 3.5em;
+    }
+    .md-no-sticky{
+        font-size:18px!important;
+    }
+
+     .item_home {
+        height:80px;
+    }
+}

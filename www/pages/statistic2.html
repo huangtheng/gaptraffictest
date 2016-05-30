@@ -1,0 +1,111 @@
+﻿
+<md-content id="wrapStatistic" flex layout="column" layout-align="center center" style="background-color:#c0c0c0;position: relative;overflow-x: hidden;">
+    <div id="wrapContent1" flex layout="column">
+        <md-subheader class="md-no-sticky subheaderStatistic">{{divider1}}</md-subheader>
+        <md-divider inset style="margin-left: 20px;margin-right: 20px;"></md-divider>
+        <div flex layout="column" layout-align="center center" ng-show="listData.length > 0">
+            <div layout="row" layout-align="center stretch" class="contentChart" flex>
+                <div id="wrapScrollChart" class="wrap-scroll-chart" layout="row" layout-align="left end" flex>
+                    <div style="width:1000px;" layout="row" layout-align="start end">
+                        <div class="itemChart" layout="column" layout-align="end center" ng-repeat="item in listData">
+                            <div ng-show="!item.isResult" flex></div>
+                            <div ng-show="!item.isResult" style="height:30px;width:30px;background-color:#757279;margin-bottom:3px">
+                                <p style="color:white;margin-top:5px;text-align:center" flex>{{item.number}}</p>
+                            </div>
+                            <div ng-show="!item.isResult" class="contentChart1" layout="column" style="height:{{item.pointError}}px">
+                                <div style="height:{{item.advancedPoint}}px;background-color:#fe8a8a;">
+                                </div>
+                                <div flex>
+                                </div>
+                            </div>
+                            <div ng-show="item.isResult" flex>
+                                <img style="height: 35px; width: 30px" src="img/icon3/39.png"/>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div style="margin-right:20px;width:30%;" layout="column" layout-align="center center">
+                    <div class="dvright" layout="vertical" layout-sm="horizontal" layout-align="left end" layout-fill>
+                        <div class="dvItemRight" layout="column" layout-align="left end" layout-fill flex>
+                            <section class="st-wrap-text" layout="vertical" layout-sm="horizontal" layout-align="left end" layout-fill>
+                                <p class="pItemAll2">{{hasmade.title}}</p>
+                                <div layout-fill flex>
+                                </div>
+                                <p class="pItemPercentL">{{hasmade.number}}</p>
+                            </section>
+                        </div>
+                    </div>
+                    <md-divider inset class="divderRight" style="width: 100%;"></md-divider>
+                    <div class="dvright" layout="vertical" layout-sm="horizontal" layout-align="left end" layout-fill>
+                        <div class="dvItemRight" layout="column" layout-align="left end" layout-fill flex>
+                            <section class="st-wrap-text" layout="vertical" layout-sm="horizontal" layout-align="left end" layout-fill>
+                                <p class="pItemAll2">{{testBestanden.title}}</p>
+                                <div layout-fill flex>
+                                </div>
+                                <p class="pItemPercentL">{{testBestanden.number}}</p>
+                            </section>
+                        </div>
+                    </div>
+                    <md-divider inset class="divderRightBlack" style="width: 100%;"></md-divider>
+                    <div class="dvright" layout="vertical" layout-sm="horizontal" layout-align="left end" layout-fill>
+                        <div class="dvItemRight" layout="column" layout-align="left end" layout-fill flex>
+                            <section class="st-wrap-text" layout="vertical" layout-sm="horizontal" layout-align="left end" layout-fill>
+                                <p class="pItemAll2">{{testBestanden.title}}</p>
+                                <div layout-fill flex>
+                                </div>
+                                <p class="pItemPercentL">{{testBestanden.percent}}%</p>
+                            </section>
+                        </div>
+                    </div>
+
+                    <div class="dvright padding" layout="vertical" layout-sm="horizontal" layout-align="left end" layout-fill>
+                        <img src="img/icon3/38.png" class="imgIconL1" style="margin-left:-10px">
+                        <div class="dvItemRight" layout="column" layout-align="left end" layout-fill flex>
+                            <section class="st-wrap-text" layout="vertical" layout-sm="horizontal" layout-align="left end" layout-fill>
+                                <p class="pItemAll2">{{wrongPoint.title}}</p>
+                                <div layout-fill flex>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    <div class="dvright" layout="vertical" layout-sm="horizontal" layout-align="left end" layout-fill>
+                        <img src="img/icon3/40.png" class="imgIconL1" style="margin-left:-10px">
+                        <div class="dvItemRight" layout="column" layout-align="left end" layout-fill flex>
+                            <section class="st-wrap-text" layout="vertical" layout-sm="horizontal" layout-align="left end" layout-fill>
+                                <p class="pItemAll2">{{advancedPoint.title}}</p>
+                                <div layout-fill flex>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    <div class="dvright" layout="vertical" layout-sm="horizontal" layout-align="left end" layout-fill>
+                        <img src="img/icon3/41.png" class="imgIconL1" style="margin-left:-10px">
+                        <div class="dvItemRight" layout="column" layout-align="left end" layout-fill flex>
+                            <section class="st-wrap-text" layout="vertical" layout-sm="horizontal" layout-align="left end" layout-fill>
+                                <p class="pItemAll2">{{basicPoint.title}}</p>
+                                <div layout-fill flex>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    <div class="dvright" layout="vertical" layout-sm="horizontal" layout-align="left end" layout-fill>
+                        <img src="img/icon3/39.png" class="imgIconL1" style="margin-left:-10px">
+                        <div class="dvItemRight" layout="column" layout-align="left end" layout-fill flex>
+                            <section class="st-wrap-text" layout="vertical" layout-sm="horizontal" layout-align="left end" layout-fill>
+                                <p class="pItemAll2">{{allBestanden.title}}</p>
+                                <div layout-fill flex>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div  flex layout="column" layout-align="center center" ng-show="listData.length == 0">
+            <p style="text-align:center">{{noTest}}</p>
+        </div>
+        <md-divider inset style="margin-left: 20px;margin-right: 20px;"></md-divider>
+        <md-subheader class="md-no-sticky subheaderStatistic1">{{version}}&nbsp;{{versionApp}} &nbsp;{{licenceApp}}&nbsp;&copy;&nbsp;{{yearApp}}&nbsp;{{appSite}}</md-subheader>
+    </div>
+</md-content>

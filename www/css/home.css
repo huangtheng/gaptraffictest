@@ -1,0 +1,50 @@
+﻿#listHome{
+    width: 100%;
+    background: #ebebeb;
+    padding: 10px 5px;
+}
+
+.item-cell {
+    display: inline-block;
+}
+
+.item-inner {
+    width: 100%;
+    height: 100%;
+}
+
+.item-bg {
+    background: #FFFFFF;
+    -webkit-box-shadow: 2px 2px 2px 0px rgba(5,5,5,0.06);
+    box-shadow: 2px 2px 2px 0px rgba(5,5,5,0.06);
+    text-align: center;
+    overflow: hidden;
+}
+
+.item-icon {
+    padding-top: 20px;
+    font-size: 60px;
+    width: 100%;
+    text-align: center;
+}
+
+.item-name {
+    height: 40px;
+}
+
+.item-name p {
+    line-height: 40px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 14px;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+@media (min-width:641px) {
+    .list-inner .item-cell {
+        width: 33.33%;
+        height: 33.33vw;
+        display: inline-block;
+    }
+}

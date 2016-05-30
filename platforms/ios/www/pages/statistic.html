@@ -1,0 +1,101 @@
+﻿<link rel="stylesheet" href="css/statistic.css" />
+<md-content layout="column" flex style="background-color: #bdbdbd;">
+    <md-tabs md-selected="selectedIndex" flex>
+        <md-tab label="1">
+            <md-content id="statisticAnswer" flex layout="column" layout-align="start stretch">
+                <md-content style="margin-top:6%;">
+                    <md-list flex class="list">
+                        <md-list-item ng-repeat="item in menuQuestion" ng-click="openStatistic(item.event);$event.stopPropagation();">
+                            <div layout="row" flex layout-fill>
+                                <img ng-src="{{item.img}}" class="imgIconLeft">
+                                <div class="dvItemRight" layout="column" flex>
+                                    <section layout="vertical" layout-sm="horizontal" layout-align="left center">
+                                        <p class="pContent" flex>{{ item.title}}</p>
+                                        <img class="icon_right" src="img/icon1/20.png" />
+                                    </section>
+                                    <md-divider inset class="divderRight"></md-divider>
+                                </div>
+                            </div>
+                        </md-list-item>
+                    </md-list>
+                </md-content>
+            </md-content>
+        </md-tab>
+
+        <md-tab label="2">
+            <div id="wrapContent" flex layout="column">
+                <md-subheader class="md-no-sticky subheaderStatistic">{{divider1}}</md-subheader>
+                <md-divider inset style="margin-left: 20px;margin-right: 20px;"></md-divider>
+                <div flex layout="column" layout-align="center center">
+                    <div layout="row" layout-align="center stretch" class="contentChart" flex>
+                        <div layout="vertical" layout-align="center start" flex>
+                            <div class="chart" flex>
+                                <canvas id="myChart"></canvas>
+                            </div>
+                        </div>
+                        <div style="margin-right:20px;width:30%;" layout-sm="column" layout-align="left" flex>
+                            <div class="dvright" layout="vertical" layout-sm="horizontal" layout-align="left end">
+                                <img src="img/icon3/right.png" class="imgIconL">
+                                <div class="dvItemRight" layout="column" layout-align="left end" layout-fill flex>
+                                    <section class="st-wrap-text" layout="vertical" layout-sm="horizontal" layout-align="left end" layout-fill>
+                                        <p class="pItemAllL">{{answeredRight.title}}</p>
+                                        <div layout-fill flex>
+                                        </div>
+                                        <p class="pItemPercentL">{{answeredRight.number}}</p>
+                                    </section>
+                                </div>
+                            </div>
+                            <md-divider inset class="divderRight"></md-divider>
+                            <div class="dvright" layout="vertical" layout-sm="horizontal" layout-align="left end">
+                                <img src="img/icon3/wrong.png" class="imgIconL">
+                                <div class="dvItemRight" layout="column" layout-align="left end" layout-fill flex>
+                                    <section class="st-wrap-text" layout="vertical" layout-sm="horizontal" layout-align="left end" layout-fill>
+                                        <p class="pItemAllL">{{answeredWrong.title}}</p>
+                                        <div layout-fill flex>
+                                        </div>
+                                        <p class="pItemPercentL">{{answeredWrong.number}}</p>
+                                    </section>
+                                </div>
+                            </div>
+                            <md-divider inset class="divderRight"></md-divider>
+                            <div class="dvright" layout="vertical" layout-sm="horizontal" layout-align="left end">
+                                <img src="img/icon2/not_answered.png" class="imgIconL">
+                                <div class="dvItemRight" layout="column" layout-align="left end" layout-fill>
+                                    <section class="st-wrap-text" layout="vertical" layout-sm="horizontal" layout-align="left end" layout-fill>
+                                        <p class="pItemAllL">{{questionNotAnswered.title}}</p>
+                                        <div layout-fill flex>
+                                        </div>
+                                        <p class="pItemPercentL">{{questionNotAnswered.number}}</p>
+                                    </section>
+                                </div>
+                            </div>
+                            <md-divider inset class="divderRightBlack"></md-divider>
+                            <div class="dvright" layout="vertical" layout-sm="horizontal" layout-align="left end">
+                                <img src="img/icon2/allquestion.png" class="imgIconL">
+                                <div class="dvItemRight" layout="column" layout-align="left end" layout-fill>
+                                    <section class="st-wrap-text" layout="vertical" layout-sm="horizontal" layout-align="left end" layout-fill>
+                                        <p class="pItemAllL">{{questionAll.title}}</p>
+                                        <div layout-fill flex>
+                                        </div>
+                                        <p class="pItemPercentL">{{questionAll.number}}</p>
+                                    </section>
+                                </div>
+                            </div>
+                            <div class="dvright padding" layout="vertical" layout-sm="horizontal" layout-align="left end">
+                                <img src="img/icon3/hard.png" class="imgIconL1">
+                                <div class="dvItemRight" layout="column" layout-align="left end" layout-fill>
+                                    <section class="st-wrap-text" layout="vertical" layout-sm="horizontal" layout-align="left end" layout-fill>
+                                        <p class="pItemAllL">{{answeredHard.title}}</p>
+                                        <div layout-fill flex>
+                                        </div>
+                                        <p class="pItemPercentL">{{answeredHard.number}}</p>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </md-tab>
+    </md-tabs>
+</md-content>

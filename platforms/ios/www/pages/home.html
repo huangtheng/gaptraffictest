@@ -1,0 +1,16 @@
+﻿<link href="css/home.css" type="text/css" rel="stylesheet" />
+<div id="listHome">
+    <div class="item-cell col col-50" ng-repeat="item in listMenu">
+        <div class="item-inner" ng-click="open(item.event);$event.stopPropagation();">
+            <div class="item-bg">
+                <div class="item-icon">
+                    <!-- <img ng-src="{{item.img1}}" /> -->
+                    <i class="fa {{item.icon}}" aria-hidden="true"></i>
+                </div>
+                <div class="item-name">
+                    <p class="pContent" flex ng-bind="item.name"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

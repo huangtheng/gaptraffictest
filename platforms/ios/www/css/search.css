@@ -1,0 +1,33 @@
+﻿.item_home_search{
+    background-color:white;
+    padding: 0 16px;
+    height:50px;
+}
+
+.item_home_search:active{
+    background-color: rgba(136, 139, 144, 0.19);
+}
+
+@media (min-width:320px) {
+    .item_home_search {
+        height:45px;
+    }
+}
+
+@media (min-width:481px) {
+    .item_home_search {
+        height:50px;
+    }
+}
+
+@media (min-width:1025px) {
+    .item_home_search {
+        height:65px;
+    }
+}
+
+@media (min-width:1281px) {
+    .item_home_search {
+        height:65px;
+    }
+}

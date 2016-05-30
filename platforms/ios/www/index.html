@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html ng-app="TrafficLaws">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>eFahrschule</title>
+
+    <link rel="stylesheet" href="css/angular-material.min.css">  
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/master.css">    
+    <link href="css/animations.css" type="text/css" rel="stylesheet">
+    <link href="css/angular-chart.min.css" type="text/css" rel="stylesheet">
+    <link href="css/touchscroll.css" type="text/css" rel="stylesheet">
+    <link href="css/font-awesome.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">  
+
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <!-- Cordova reference, this is added to your app when it's built. -->
+    <script src="cordova.js"></script>
+    <script src="scripts/platformOverrides.js"></script>
+
+    <script src="scripts/frameworks/angular.min.js"></script>
+    <script src="scripts/frameworks/angular-resource.min.js"></script>
+    <script src="scripts/frameworks/angular-animate.min.js"></script>
+    <script src="scripts/frameworks/angular-messages.min.js"></script>
+    <script src="scripts/frameworks/angular-aria.min.js"></script>
+    <script src="scripts/frameworks/angular-material.min.js"></script>
+    <script src="scripts/frameworks/angular-ui-router.min.js"></script>
+    <script src="scripts/frameworks/Chart.min.js"></script>
+    <script src="scripts/frameworks/angular-chart.min.js"></script>
+    <script src="scripts/frameworks/angular-touch.js"></script>
+    <script src="scripts/frameworks/ngActivityIndicator.min.js"></script>   
+    <script src="scripts/frameworks/css-beziers.js"></script>
+    <!--    <script src="scripts/frameworks/touchscroll.js"></script>-->
+
+    <!-- Language -->
+    <script src="scripts/utils/menu_default.js"></script>
+
+    <!-- services -->
+    <script src="scripts/services/cordovaService.js"></script>    
+    <script src="scripts/services/ConnectService.js"></script> 
+    <script src="scripts/services/DatabaseService.js"></script>
+
+    <!-- utils -->
+    <script src="scripts/utils/Utils.js"></script>
+
+    <!-- model -->
+    <script src="scripts/models/menuQuestionModel.js"></script>
+    <script src="scripts/models/QuestionModel.js"></script>
+
+    <!-- controller -->
+    <script src="scripts/helper.js"></script>
+    <!-- <script src="scripts/index.js"></script> -->
+    <script src="scripts/controllers/app.js"></script>
+    <script src="scripts/controllers/homeController.js"></script>
+    <script src="scripts/controllers/searchController.js"></script>
+    <script src="scripts/controllers/themeController.js"></script>
+    <script src="scripts/controllers/categoriesController.js"></script>
+    <script src="scripts/controllers/questionController.js"></script>
+    <script src="scripts/controllers/testController.js"></script>
+    <script src="scripts/controllers/questionSearchController.js"></script>
+    <script src="scripts/controllers/settingController.js"></script>
+    <script src="scripts/controllers/statisticController.js"></script>
+    <script src="scripts/controllers/statistic2Controller.js"></script>
+</head>
+<body class="platform-ios platform-cordova platform-webview">
+    <ion-view ng-controller="MasterCtrl">
+        <div class="bar bar-header bar-dark">
+            <div class="buttons">
+                <a class="button button-clear" ng-if="isBack" ng-click="setting($event);$event.stopPropagation();">
+                    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                </a>
+            </div>
+            <h1 class="title">{{titleAll.length &gt; 0 ? titleAll : &quot;eFahrschule&quot;}}</h1>
+            <div class="buttons">
+                <a class="button button-clear" ng-if="!searchDisabled" ng-show="!isSearch" ng-click="openSearch();$event.stopPropagation();">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </a>
+                <a class="button button-clear" ng-if="showChangeLanguageBtn" ng-click="changeLanguage()">
+                    <i class="fa fa-language" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+        <ion-content class="scroll-content ionic-scroll overflow-scroll has-header" id="wrapAll" ui-view="">
+        </ion-content>
+    </ion-view>
+</body>
+</html>
+

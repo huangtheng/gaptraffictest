@@ -1,0 +1,189 @@
+﻿<link rel="stylesheet" href="css/question.css" />
+<!--  content list question item -->
+<div id="listQuestion" ng-controller="QuestionItemCtrl" style="display:none">
+    <link href="css/questionItem.css" type="text/css" rel="stylesheet" />
+    <md-toolbar id="toolbar3" style="background-color: #ffbf15" layout="row" layout-align="center center" ng-class="{toolbarHard1: questionCurrent.ISHARD && !questionCurrent.ISANSWERED && isShowBar}">            
+        <p style="text-align:center;font-weight:600;color:black">{{hardText}}</p>
+     </md-toolbar>
+    <md-toolbar id="toolbar3" style="background-color: #3db707" layout="row" layout-align="center center" ng-class="{toolbarRight: questionCurrent.ISANSWERED && questionCurrent.ANSWERRIGHT && isShowBar}">            
+        <p style="text-align:center;font-weight:600;color:black">{{MenuQuestionItem.statusRight}}</p>
+    </md-toolbar>
+    <md-toolbar id="toolbar3" style="background-color: #cd2630" layout="row" layout-align="center center" ng-class="{toolbarWrong: questionCurrent.ISANSWERED && !questionCurrent.ANSWERRIGHT && isShowBar}">
+        <p style="text-align:center;font-weight:600;color:black">{{MenuQuestionItem.statusWrong}}</p>
+    </md-toolbar>
+    <div class="tabs tabs-top tabs-question-top tabs-default">
+        <a class="tab-item">
+            {{count + 1}}/{{sum}}
+        </a>
+        <a class="tab-item">
+            {{MenuQuestionItem.klass}}
+        </a>
+        <a class="tab-item">
+            {{MenuQuestionItem.point}}{{questionCurrent.ZPOINTS}}
+        </a>
+    </div>
+    <md-content class="wrap_flip">
+        <!-- item 1 -->
+        <md-content id="flip1" class="item_flip flipLeft flip-container" layout="column" layout-sm="column" ng-swipe-left="rotateLeft(); $event.stopPropagation()" ng-swipe-right="rotateRight(); $event.stopPropagation()">
+            <section class="stQuestionContent" layout="column" layout-align="start stretch">
+                <div layout="column" layout-align="center left">
+                    <p class="pQuestion">#{{questionCurrent.ZFRAGENKATALOG}}: </p>
+                    <p class="pQuestion" ng-show="!questionItem1.ZISVIDEO" ng-bind-html="questionItem1.ZQUESTIONTEMP"></p>
+                    <p class="pQuestion" ng-show="questionItem1.ZISVIDEO">{{titlePlayVideo}}</p>
+                </div>
+            </section>  
+            <section ng-show="questionItem1.ZISIMAGE" class="dvVideoL">
+                <img class="imgBig" ng-src="{{assetsPath + questionItem1.ZIMAGE}}" ng-click="fullImage(); $event.stopPropagation()" />
+            </section>              
+            <section class="question-section" layout="column" layout-align="start start">
+                <div class="full-width" layout="column" layout-align="center center">
+                    <div style="min-width:100%;" class="dvContentR1 md-block" ng-show="questionItem1.ZISVIDEO" layout="column" layout-align="top center">
+                        <input id="ipFilm" type="button" value="{{MenuQuestionItem.filmStart}}" ng-click="playVideo()" />
+                        <input ng-show="countPlayVideo < 5" id="ipZur" type="button" value="{{MenuQuestionItem.viewQuestion}}" ng-click="showQuestion()" />
+                    </div>
+                    <div style="min-width:100%;" ng-show="questionItem1.ZISVIDEO" layout="column" layout-align="center center" ng-bind-html="countPlayVideoText"></div>
+                </div>
+                <div style="min-width:100%;" ng-class="{dvContentR2: questionItem1.ZISIMAGE ,dvContentR2_1: !questionItem1.ZISIMAGE}" layout="column" ng-show="!questionItem1.ZISVIDEO">
+                    <div layout="column" layout-align="start" ng-show="!questionItem1.ZISINPUT">
+                        <p class="pretext" ng-show="questionItem1.ZISPRETEXT" ng-bind-html="questionItem1.ZPRETEXTTEMP"></p>
+                        <div layout="vertical" ng-repeat="item in questionItem1.ZANSWER | orderBy: 'Number'" layout-sm="horizontal" layout-align="left center" ng-show="item.isAnswer" ng-click="check(item, questionItem1)">
+                            <img id="check" ng-show="!questionItem1.ISANSWERED" ng-src="{{item.checkAnswer == false ? 'img/answer_uncheck.png' : 'img/answer_check.png'}}" />
+                            <img id="check" ng-show="questionItem1.ISANSWERED" ng-src="{{item.isValid}}" />
+                            <img ng-show="item.isImage" ng-src="{{item.vn.ZANSWERIMAGE}}" class="imgBig_1" />
+                            <p class="pAnswer" ng-show="!item.isImage" flex ng-bind-html="item.ZANSWER"></p>
+                        </div>
+                    </div>
+                    <div layout="column" layout-sm="column" layout-align="center center" ng-show="questionItem1.ZISINPUT">
+                        <div layout="column" layout-sm="column" layout-align="center center">
+                            <p ng-show="questionItem1.ISANSWERED">{{MenuQuestionItem.yourAnswer}}</p>
+                            <form ng-submit="blurInput1()" layout="vertical" layout-sm="horizontal" layout-align="center center" ng-bind-html="renderHtml(questionItem1.ANSWERINPUTSTRING1TEMP)">
+                            </form>
+                        </div>
+                        <div layout="column" layout-sm="column" layout-align="center center" ng-show="questionItem1.ISANSWERED">
+                            <p>{{MenuQuestionItem.rightAnswer}}</p>
+                            <div layout="vertical" layout-sm="horizontal" layout-align="center center" ng-bind-html="renderHtml(questionItem1.ANSWERINPUTSTRING2TEMP)">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </md-content>
+        <!-- item 2 -->
+        <md-content id="flip2" class="item_flip flip-container" layout="column" layout-sm="column" ng-swipe-left="rotateLeft(); $event.stopPropagation()" ng-swipe-right="rotateRight(); $event.stopPropagation()">
+            <section class="stQuestionContent" layout="column" layout-align="start stretch">
+                <div layout="column" layout-align="center left">
+                    <p class="pQuestion">#{{questionCurrent.ZFRAGENKATALOG}}: </p>
+                    <p class="pQuestion" ng-show="!questionItem2.ZISVIDEO" ng-bind-html="questionItem2.ZQUESTIONTEMP"></p>
+                    <p class="pQuestion" ng-show="questionItem2.ZISVIDEO">{{titlePlayVideo}}</p>
+                </div>
+            </section>
+            <section ng-show="questionItem2.ZISIMAGE" layout="column" class="dvVideoL">
+                <img class="imgBig" ng-src="{{assetsPath + questionItem2.ZIMAGE}}" ng-click="fullImage(); $event.stopPropagation()" />
+            </section>                
+            <section class="question-section" layout="column" layout-align="start start">
+                <div class="full-width" layout="column" layout-align="center center">
+                    <div style="min-width:100%;" class="dvContentR1" ng-show="questionItem2.ZISVIDEO" layout="column" layout-align="top center">
+                        <input id="ipFilm" type="button" value="{{MenuQuestionItem.filmStart}}" ng-click="playVideo()" />
+                        <input ng-show="countPlayVideo < 5" id="ipZur" type="button" value="{{MenuQuestionItem.viewQuestion}}" ng-click="showQuestion()" />
+                    </div>
+                    <div style="min-width:100%;" ng-show="questionItem2.ZISVIDEO" layout="column" layout-align="center center" ng-bind-html="countPlayVideoText"></div>
+                </div>
+                <div style="min-width:100%;" ng-class="{dvContentR2: questionItem2.ZISIMAGE ,dvContentR2_1: !questionItem2.ZISIMAGE}" layout="column" ng-show="!questionItem2.ZISVIDEO">
+                    <div layout="column" layout-align="start" ng-show="!questionItem2.ZISINPUT">
+                        <p class="pretext" ng-show="questionItem2.ZISPRETEXT" ng-bind-html="questionItem2.ZPRETEXTTEMP"></p>
+                        <div layout="vertical" ng-repeat="item in questionItem2.ZANSWER | orderBy: 'Number'" layout-sm="horizontal" layout-align="left center" ng-show="item.isAnswer" ng-click="check(item, questionItem2)">
+                            <img id="check" ng-show="!questionItem2.ISANSWERED" ng-src="{{item.checkAnswer == false ? 'img/answer_uncheck.png' : 'img/answer_check.png'}}" />
+                            <img id="check" ng-show="questionItem2.ISANSWERED" ng-src="{{item.isValid}}" />
+                            <img ng-show="item.isImage" ng-src="{{item.vn.ZANSWERIMAGE}}" class="imgBig_1" />
+                            <p class="pAnswer" ng-show="!item.isImage" flex ng-bind-html="item.ZANSWER"></p>
+                        </div>
+                    </div>
+                    <div layout="column" layout-sm="column" layout-align="center center" ng-show="questionItem2.ZISINPUT">
+                        <div layout="column" layout-sm="column" layout-align="center center">
+                            <p ng-show="questionItem2.ISANSWERED">{{MenuQuestionItem.yourAnswer}}</p>
+                            <form ng-submit="blurInput2()" layout="vertical" layout-sm="horizontal" layout-align="center center" ng-bind-html="renderHtml(questionItem2.ANSWERINPUTSTRING1TEMP)">
+                            </form>
+                        </div>
+                        <div layout="column" layout-sm="column" layout-align="center center" ng-show="questionItem2.ISANSWERED">
+                            <p>{{MenuQuestionItem.rightAnswer}}</p>
+                            <div layout="vertical" layout-sm="horizontal" layout-align="center center" ng-bind-html="renderHtml(questionItem2.ANSWERINPUTSTRING2TEMP)">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </md-content>
+        <!-- item 3 -->
+        <md-content id="flip3" class="item_flip flipRight flip-container" layout="column" layout-sm="column" ng-swipe-left="rotateLeft(); $event.stopPropagation()" ng-swipe-right="rotateRight(); $event.stopPropagation()">
+            <section class="stQuestionContent" layout="column" layout-align="start stretch">
+                <div layout="column" layout-align="center left">
+                    <p class="pQuestion">#{{questionCurrent.ZFRAGENKATALOG}}: </p>
+                    <p class="pQuestion" ng-show="!questionItem3.ZISVIDEO" ng-bind-html="questionItem3.ZQUESTIONTEMP"></p>
+                    <p class="pQuestion" ng-show="questionItem3.ZISVIDEO">{{titlePlayVideo}}</p>
+                </div>
+            </section>
+            <section ng-show="questionItem3.ZISIMAGE" layout="column"  class="dvVideoL">
+                <img class="imgBig" ng-src="{{assetsPath + questionItem3.ZIMAGE}}" ng-click="fullImage(); $event.stopPropagation()" />
+            </section>                
+            <section class="question-section" layout="column" layout-align="start start">
+                <div class="full-width" layout="column" layout-align="center center">
+                    <div style="min-width:100%;" class="dvContentR1" ng-show="questionItem3.ZISVIDEO" layout="column" layout-align="top center">
+                        <input id="ipFilm" type="button" value="{{MenuQuestionItem.filmStart}}" ng-click="playVideo()" />
+                        <input ng-show="countPlayVideo < 5" id="ipZur" type="button" value="{{MenuQuestionItem.viewQuestion}}" ng-click="showQuestion()" />
+                    </div>
+                    <div style="min-width:100%;" ng-show="questionItem3.ZISVIDEO" layout="column" layout-align="center center" ng-bind-html="countPlayVideoText"></div>
+                </div>
+                <div style="min-width:100%;" ng-class="{dvContentR2: questionItem3.ZISIMAGE ,dvContentR2_1: !questionItem3.ZISIMAGE}" layout="column" ng-show="!questionItem3.ZISVIDEO">
+                    <div layout="column" layout-align="start" ng-show="!questionItem3.ZISINPUT">
+                        <p class="pretext" ng-show="questionItem3.ZISPRETEXT" ng-bind-html="questionItem3.ZPRETEXTTEMP"></p>
+                        <div layout="vertical" ng-repeat="item in questionItem3.ZANSWER | orderBy: 'Number'" layout-sm="horizontal" layout-align="left center" ng-show="item.isAnswer" ng-click="check(item, questionItem3)">
+                            <img id="check" ng-show="!questionItem3.ISANSWERED" ng-src="{{item.checkAnswer == false ? 'img/answer_uncheck.png' : 'img/answer_check.png'}}" />
+                            <img id="check" ng-show="questionItem3.ISANSWERED" ng-src="{{item.isValid}}" />
+                            <img ng-show="item.isImage" ng-src="{{item.vn.ZANSWERIMAGE}}" class="imgBig_1" />
+                            <p class="pAnswer" ng-show="!item.isImage" flex ng-bind-html="item.ZANSWER"></p>
+                        </div>
+                    </div>
+                    <div layout="column" layout-sm="column" layout-align="center center" ng-show="questionItem3.ZISINPUT">
+                        <div layout="column" layout-sm="column" layout-align="center center">
+                            <p ng-show="questionItem3.ISANSWERED">{{MenuQuestionItem.yourAnswer}}</p>
+                            <form ng-submit="blurInput3()" layout="vertical" layout-sm="horizontal" layout-align="center center" ng-bind-html="renderHtml(questionItem3.ANSWERINPUTSTRING1TEMP)">
+                            </form>
+                        </div>
+                        <div layout="column" layout-sm="column" layout-align="center center" ng-show="questionItem3.ISANSWERED">
+                            <p>{{MenuQuestionItem.rightAnswer}}</p>
+                            <div layout="vertical" layout-sm="horizontal" layout-align="center center" ng-bind-html="renderHtml(questionItem3.ANSWERINPUTSTRING2TEMP)">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </md-content> 
+    </md-content>           
+
+    <div class="tabs tabs-default">
+        <a class="tab-item" ng-if="!questionCurrent.ZISVIDEO" ng-click="onCheckValid()">
+            {{MenuQuestionItem.viewResult}}
+        </a>
+        <a class="tab-item" ng-click="onSetHard()" >
+            Hard
+        </a>
+        <a class="tab-item" ng-if="!isTestEnd" ng-click="onPrevios()" >
+            {{MenuQuestionItem.previos}}
+        </a>
+        <a class="tab-item"  ng-if="!isTestEnd" ng-click="onNextItem()">
+            {{MenuQuestionItem.next}}
+        </a>
+    </div>
+
+    <md-content id="dialog" layout="vertical" layout-fill ng-click="hide()" style="display:none">
+        <md-content layout="vertical" layout-fill layout-sm="horizontal" layout-align="center center">
+            <img ng-class="{imgBig_variant1: questionCurrent.ZVARIANT, imgBig1: !questionCurrent.ZVARIANT}" ng-src="{{questionCurrent.ZBIGIMAGE}}" />
+        </md-content>
+    </md-content>
+
+    <md-content id="dialogVideo" layout="vertical" layout-fill ng-click="hideVideo()"  style="display:none;">
+        <md-content layout="vertical" layout-fill layout-sm="horizontal" layout-align="center center">
+            <video autoplay controls="true" width='100%' height='100%' id="video" playsinline webkit-playsinline />
+        </md-content>
+    </md-content>
+</div>

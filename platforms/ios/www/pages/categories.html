@@ -1,0 +1,39 @@
+<div id="mainQuestion" class="list" ng-controller="CategoriesCtrl" style="display:none;">
+    <div class="item item-divider">{{divider1}}</div>
+    <a class="item item-avatar" ng-repeat="item in menuQuestion" ng-click="open(item.event);$event.stopPropagation();">
+      <img src="{{item.img}}">
+      <h2>{{ item.name}}{{item.number != "" ? ' (' + item.number + ')' : ' (0)'}}</h2>
+      <p>{{item.percent + '%'}}</p>
+    </a>
+    <div class="item item-divider">{{divider2}}</div>
+    <a class="item item-avatar" ng-repeat="item in questionTheme1" ng-click="chooseTheme(item.ZPREFIX, item.ISSHOW, item.ZNAMEVN, item.ZNAMEDE);$event.stopPropagation();">
+      <img src="{{item.ZICON}}">
+      <h2>{{language ? item.ZNAMEVN : item.ZNAMEDE}}</h2>
+    </a>
+    <div class="item item-divider">{{divider3}}</div>
+    <a class="item item-avatar" ng-repeat="item in questionTheme2" ng-click="chooseTheme(item.ZPREFIX, item.ISSHOW, item.ZNAMEVN, item.ZNAMEDE);$event.stopPropagation();">
+      <img src="{{item.ZICON}}">
+      <h2>{{language ? item.ZNAMEVN : item.ZNAMEDE}}</h2>
+    </a>
+</div>
+
+<script id="theme-modal.html" type="text/ng-template">
+  <ion-modal-view>
+    <ion-header-bar class="bar-dark">
+      <button class="button button-clear" ng-click="modal.hide()">
+        <i class="fa fa-times" aria-hidden="true"></i>
+      </button>
+      <h1 class="title">{{modalTitle}}</h1>
+    </ion-header-bar>
+    <ion-content>
+      <div class="list" ng-controller="QuestionByThemeCtrl">
+          <div class="item item-divider">{{divider1}}</div>
+          <a class="item item-avatar" ng-repeat="item in menuQuestion" ng-click="openQuestion(item.event);$event.stopPropagation();">
+            <img src="{{item.img}}">
+            <h2>{{ item.name}}{{item.number != "" ? ' (' + item.number + ')' : ' (0)'}}</h2>
+            <p>{{item.percent + '%'}}</p>
+          </a>
+      </div>
+    </ion-content>
+  </ion-modal-view>
+</script>

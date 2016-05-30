@@ -1,0 +1,41 @@
+<div id="mainQuestion" class="list" ng-controller="CategoriesCtrl" style="display:none;">
+    <div class="item item-divider">{{divider1}}</div>
+    <a class="item item-icon-left" ng-repeat="item in menuQuestion" ng-click="open(item.event);$event.stopPropagation();">
+      <i class="icon fa {{item.icon}}"></i>
+      <h2>{{ item.name}}</h2>
+      <p>{{item.percent + '%'}}</p>
+      <span class="badge badge-dark">{{item.number != "" ? item.number :  0}}</span>
+    </a>
+    <div class="item item-divider">{{divider2}}</div>
+    <a class="item item-icon-left item-custom" ng-repeat="item in questionTheme1" ng-click="chooseTheme(item.ZPREFIX, item.ISSHOW, item.ZNAMEVN, item.ZNAMEDE);$event.stopPropagation();">
+      <span class="button button-dark">{{item.ZPREFIX}}</span>
+      <p>{{language ? item.ZNAMEVN : item.ZNAMEDE}}</p>
+    </a>
+    <div class="item item-divider">{{divider3}}</div>
+    <a class="item item-icon-left item-custom" ng-repeat="item in questionTheme2" ng-click="chooseTheme(item.ZPREFIX, item.ISSHOW, item.ZNAMEVN, item.ZNAMEDE);$event.stopPropagation();">
+      <span class="button button-dark">{{item.ZPREFIX}}</span>
+      <p>{{language ? item.ZNAMEVN : item.ZNAMEDE}}</p>
+    </a>
+</div>
+
+<script id="theme-modal.html" type="text/ng-template">
+  <ion-modal-view>
+    <ion-header-bar class="bar-dark">
+      <button class="button button-clear" ng-click="modal.hide()">
+        <i class="fa fa-times" aria-hidden="true"></i>
+      </button>
+      <h1 class="title">{{modalTitle}}</h1>
+    </ion-header-bar>
+    <ion-content>
+      <div class="list" ng-controller="QuestionByThemeCtrl">
+          <div class="item item-divider">{{divider1}}</div>
+          <a class="item item-icon-left" ng-repeat="item in menuQuestion" ng-click="openQuestion(item.event);$event.stopPropagation();">
+            <i class="icon fa {{item.icon}}"></i>
+            <h2>{{ item.name}}</h2>
+            <p>{{item.percent + '%'}}</p>
+            <span class="badge badge-dark">{{item.number != "" ? item.number :  0}}</span>
+          </a>
+      </div>
+    </ion-content>
+  </ion-modal-view>
+</script>

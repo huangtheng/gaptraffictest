@@ -1,0 +1,16 @@
+<ion-content id="contentSearch" ng-controller="SearchCtrl">
+    <div class="list list-inset">
+      <label class="item item-input">
+            <i class="fa fa-search placeholder-icon" aria-hidden="true"></i>
+            <input type="text" placeholder="Search" ng-model="searchInput" type="search" placeholder="Nội dung tìm kiếm" ng-change="changeSearch($event);$event.stopPropagation();" ng-enter="enterSearch($event);$event.stopPropagation();">
+        </label>
+    </div>
+    <div id="scrollSearch">
+        <ul class="list">
+            <li class="item" ng-repeat="item in listSearch" ng-click="openQuestion(item.ZID);$event.stopPropagation();">
+              <h2>{{item.ZFRAGENKATALOG}}</h2>
+              <p>{{item.ZQUESTIONTEMP}}</p>
+            </li>
+        </ul>
+    </div>
+</ion-content>
